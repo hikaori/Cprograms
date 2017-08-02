@@ -67,6 +67,9 @@ may work on paper.*/
 Compute the sum of these two integers, then print a message back to the screen, in the format
 “<int1> plus <int2> equals <sum>”.*/
 
+
+
+/* answer
 #include<stdio.h>
 
 int main(){
@@ -81,6 +84,8 @@ int main(){
 	
 	return 0;
 }
+*/
+
 
 
 /*2. Save your program in the file first.c. What is the command to compile your program into an
@@ -93,12 +98,33 @@ answer =>  gcc -o first first.c
 are read). Save the integers in two parallel arrays, each of length 5. Then use another loop to
 print 5 messages back to the screen, one for each pair.*/
 
+
+#include<stdio.h>
+
+int main(){
+	int array1[5];
+	int array2[5];
+	int Num1,Num2,i,j;
+
+	for (i =0; i<5; i++){
+		printf("Enter two integers:");
+        	scanf("%d %d",&Num1,&Num2);
+		array1[i]=Num1;
+		array2[i]=Num2;
+	}
+	
+	for(j =0; j<5; j++){
+		printf("%d %d\n",array1[j],array2[j]);
+	}
+
+	return 0;
+}
+
 /*4. What are the basic data types in C and their sizes in bytes?
 
 answer => int(4bits)
 	  short(4bits)
 	  long(8bits)
-	  char(1bits)
-*/
+	  char(1bits)*/
 
 
