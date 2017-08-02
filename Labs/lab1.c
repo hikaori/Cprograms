@@ -70,12 +70,13 @@ Compute the sum of these two integers, then print a message back to the screen, 
 #include<stdio.h>
 
 int main(){
-        int int1,int2
-        int1 = 1;
-        int2 = 2;
-        i = int1 + int2;
-        printf("%d\n",i);
-return 0;
+        int Num1,Num2,sum;
+	
+        Num1 = 1;
+        Num2 = 2;
+        sum = Num1 + Num2;
+        printf("%d/n",sum);
+
 }
 
 
