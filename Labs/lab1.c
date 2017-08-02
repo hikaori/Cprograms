@@ -71,12 +71,15 @@ Compute the sum of these two integers, then print a message back to the screen, 
 
 int main(){
         int Num1,Num2,sum;
+        //Num1 = 1;
+        //Num2 = 2;
 	
-        Num1 = 1;
-        Num2 = 2;
+	printf("Enter two integers:");
+	scanf("%d %d",&Num1,&Num2);
         sum = Num1 + Num2;
         printf("%d/n",sum);
-
+	
+	return 0;
 }
 
 
