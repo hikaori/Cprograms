@@ -1,41 +1,38 @@
 #include<stdio.h>
-#define MAXLINE 1000
-void escape(char s[],char t[]);
+#include<time.h>
 
-int main(void){
+int binsearch(int x, int v[], int n){
 
-	char s[MAXLINE],t[MAXLINE];
-
-	//putchar('s');
-	//s[0] = getchar();
-	//printf("%s",s);
-	printf("enter a string for s \n");
- 	gets(s);
-	printf("entered string s is %s", s);
-
-	printf("enter a string for t\n");
-	gets(t);
-	printf("entered string t is %s", t);
-
-	escape(s,t);
-}
-
-void escape(char s[],char t[]){
-	int k,i;
-	k=0;
-	for(i=0; t[i]!='\0'; i++){
-	while(t[i]==' ')
-	{
-		s[k]='z';
-		i++;
-k++;
+	int low , high , mid;
+	
+	low = 0;
+ 	high = n-1;
+	mid = (high+low)/2;
+	
+	while(low < high && x != v[mid]){
+		if(x > v[mid]){
+		 low = mid+1;
+		}
+		else{
+		 high = mid-1;
+		}
+	 mid = (high+low)/2;
 	}
-	  s[k]=t[i];
-	  k++;
+	if(x == v[mid]){
+	 return mid;
+	}
+	else{
+	 return -1;
+	}	
 }
-s[k]='\0';
-	printf("\nthis is output\n %s:",s);	
+
+int main(){
+	int array[] ={2,4,6,7,5,9,34,65,98,78};
+	clock_t begin =clock();
+	printf("%d\n",binsearch(9,array,10));
+	clock_t end =clock();
+	
+	double time_spent =(double)(end-begin) / CLOCKS_PER_SEC;
+	printf("Time is :%lf\n",time_spent);
+	return 0;
 }
-
-
-
