@@ -6,7 +6,7 @@ void increment(){
     int arr[] ={10, 100, 200};
     int i;
     int *ptr;
-    //int *ptr; , int* ptr; は同じ。
+    //int *ptr; , int* ptr; は定義の場所では同じ。
 
     ptr = arr; /* arr address in pointer */
     for (i = 0; i < MAX; i++){
@@ -19,7 +19,7 @@ void increment(){
 void pointer_comparison(){
     int arr[] = {10, 100 ,200};
     int i, *ptr;
-    //int *ptr; , int* ptr; は同じ。
+    //int *ptr; , int* ptr;定義の場所では同じ。
 
     ptr = arr;  /* arr address in pointer */
     i = 0;
