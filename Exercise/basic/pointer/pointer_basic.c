@@ -2,10 +2,14 @@
 // 　int X  => holding integer type
 //   int* Y => holding the memory address of the data type(this case:integer).
 //  
-//  @@@@ int* Y != int *Y @@@@
+//  <定義の場合>
+//  int* Y (int *Y) => address
 //
-//  int* Y => address
+//  <メソッドの場合>
 //  int *Y => content(value)
+//
+//  注意：定義    のint *Y(hold address)　と
+//        メソッドのint *Y(what's inside content)は別物。
 //
 //  &X     => address. think like 'what's memorry address'
 /////////////////////////////////////////////
@@ -14,7 +18,8 @@
 
 int main(){
     int var = 20;
-    int* ip; /* pointer variable. */
+    int *ip;
+    //int* ip; /* pointer variable. */
         // 'int*' => think as one of data type. holds the memory address. 
     ip = &var; /* store address of var in pointer varaiable. */
         // '&' => think like what's is memorry address?
