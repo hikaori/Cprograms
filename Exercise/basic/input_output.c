@@ -17,7 +17,7 @@ void get_puts(){
     gets(str);
 
     printf("\nYou enterd:");
-    puts(str);
+    puts(str);  // OUT PUT -> You enterd:hello
 }
 
 void scanf_printf(){
@@ -27,10 +27,11 @@ void scanf_printf(){
     scanf("%s %d",str, &i);
 
     printf("\nYou enterd: %s %d", str, i);
+    //OUT PUT -> You enterd: hello 0
 }
 
 int main(){
-    //get_put_char();
-   // get_puts();
-      scanf_printf();
+//      get_put_char();
+      get_puts();
+//      scanf_printf();
 }
