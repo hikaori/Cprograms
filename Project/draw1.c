@@ -23,9 +23,10 @@ int main(int argc,char *argv[]){
     int child_count;
     int coment_count;
 
-    while(fgets(buffer,maxchar,fp) != NULL){
-        fscanf(fp,"%s",buffer);
-        printf("Read String1 |%s|\n",buffer);
+    while(!feof(fp)){
+       // printf("%s\n", buffer);
+        fscanf(fp,"%s%*[^\n]",buffer);
+        printf("%s\n", buffer);
     
         //'strcmp' is compare string. if it equal return 0.
         if(strcmp(buffer,"Image") == 0){
@@ -51,7 +52,7 @@ int main(int argc,char *argv[]){
         }
         else if(strcmp(buffer,"#") == 0){
              coment_count++;
-        } 
+        }
     }
     printf("%d Image definition(s)\n", img_count);
     printf("%d lineTo definition(s)\n", lineto_count);
